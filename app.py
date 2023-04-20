@@ -23,7 +23,7 @@ def Index():
     return render_template('index.html', students=data)
 
 
-@app.route('/insert', methods = ['POST'])
+@app.route('/', methods = ['POST'])
 def insert():
     if request.method == "POST":
         flash("Data Inserted Successfully")
@@ -35,7 +35,7 @@ def insert():
         mysql.connection.commit()
         return redirect(url_for('Index'))
 
-@app.route('/delete/<string:id_data>', methods = ['GET'])
+@app.route('/', methods = ['GET'])
 def delete(id_data):
     flash("Record Has Been Deleted Successfully")
     cur = mysql.connection.cursor()
@@ -45,7 +45,7 @@ def delete(id_data):
 
 
 
-@app.route('/update', methods= ['POST', 'GET'])
+@app.route('/', methods= ['POST', 'GET'])
 def update():
     if request.method == 'POST':
         id_data = request.form['id']
