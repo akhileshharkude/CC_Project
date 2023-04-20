@@ -12,7 +12,7 @@
 <body>
     
 <div class="container-fluid">
-<h1 class="text-center alert alert-danger">Python Flask CRUD Application</h1>
+<h1 class="text-center alert alert-danger">Student Registration</h1>
         <div class="row">
             <div class="col-sm-2"></div>
 
@@ -90,7 +90,6 @@
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
-            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -100,11 +99,7 @@
         <td>{{row.1}}</td>
         <td>{{row.2}}</td>
         <td>{{row.3}}</td>
-        <td>
-            <a href="/update/{{row.0}}" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modaledit{{row.0}}">Edit</a>
-            <a href="/delete/{{ row.0 }}" onclick="return confirm('Are Sure Want To Deleted ?')" class="btn btn-danger btn-sm">Delete</a>
 
-        </td>
     </tr>
 
 
